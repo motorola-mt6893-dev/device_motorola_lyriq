@@ -20,7 +20,8 @@ AB_OTA_PARTITIONS += \
     vendor \
     vendor_dlkm \
     odm \
-    odm_dlkm
+    odm_dlkm \
+    vbmeta
 
 BOARD_MOVE_RECOVERY_RESOURCES_TO_VENDOR_BOOT := true
 
@@ -124,3 +125,7 @@ TARGET_BOARD_PLATFORM := mt6893
 TARGET_RECOVERY_PIXEL_FORMAT := "BGRA_8888"
 TARGET_USERIMAGES_USE_EXT4 := true
 TARGET_USERIMAGES_USE_F2FS := true
+
+# Verified Boot
+BOARD_AVB_ENABLE := true
+BOARD_AVB_MAKE_VBMETA_IMAGE_ARGS += --flags 3
